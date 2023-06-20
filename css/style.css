@@ -208,7 +208,6 @@ li {
 .c-button__detail {
   display: inline-block;
   background: #fff;
-  border-radius: 22px;
   color: #707070;
 }
 
@@ -256,6 +255,7 @@ li {
   transform: translateY(6px) rotate(-45deg);
   width: 45px;
   top: 13px;
+  right: 10px;
 }
 .c-menu.is-active span:nth-of-type(2) {
   opacity: 0;
@@ -266,6 +266,7 @@ li {
   height: 6px;
   background-color: #707070;
   top: 25px;
+  right: 10px;
 }
 
 .c-flex {
@@ -418,8 +419,16 @@ li {
 }
 .p-search__input {
   padding: 11px 0;
+  padding-left: 50px;
+  padding-right: 10px;
   width: 61.3333333333vw;
   height: 46px;
+  text-align: left;
+}
+@media only screen and (min-width: 768px) {
+  .p-search__input {
+    width: 47.4820143885vw;
+  }
 }
 @media only screen and (min-width: 1079px) {
   .p-search__input {
@@ -778,6 +787,7 @@ li {
   font-size: 16px;
   font-weight: 700;
   line-height: 23px;
+  border-radius: 20vw;
 }
 @media only screen and (min-width: 768px) {
   .p-archiveItem__button {
