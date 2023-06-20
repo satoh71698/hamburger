@@ -12,8 +12,14 @@
   }
   &__input {
     padding: 11px 0;
+    padding-left: 50px;
+    padding-right: 10px;
     width: spWidth(230);
     height: 46px;
+    text-align: left;
+    @include tb {
+      width: tbWidth(396);
+    }
     @include pc {
       width: pcWidth(396);
     }
