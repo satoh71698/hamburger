@@ -1,0 +1,52 @@
+/*---------------------------- font -------------------------------------*/
+
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@400;700&family=Roboto:wght@400;700&display=swap");
+
+/*---------------------------- screen ---------------------------------*/
+
+@mixin sp($width-media: 0px) {
+  @media only screen and (min-width: $width-media) {
+    @content;
+  }
+}
+
+@mixin tb($width-media: 768px) {
+  @media only screen and (min-width: $width-media) {
+    @content;
+  }
+}
+
+@mixin pc($width-media: 1079px) {
+  @media only screen and (min-width: $width-media) {
+    @content;
+  }
+}
+
+/*----------------------------- color ----------------------------------*/
+$White: #fff;
+$Black: #000000;
+$Gray: #707070;
+$Orange: #fff7ef;
+$rightOrange: #fffdfa;
+$rightGray: #f2ede9;
+$Brown: #3c2b1c;
+$Blue: #4a6c9b;
+$rightBlue: #f5f5f5;
+
+@function spWidth($spWidth) {
+  $sp: 375px;
+  $widthSize: $spWidth * 1px;
+  @return ($widthSize / $sp) * 100vw;
+}
+
+@function tbWidth($tbWidth) {
+  $tb: 834px;
+  $tbWidthSize: $tbWidth * 1px;
+  @return ($tbWidthSize / $tb) * 100vw;
+}
+
+@function pcWidth($pcWidth) {
+  $pc: 1920px;
+  $pcWidthSize: $pcWidth * 1px;
+  @return ($pcWidthSize / $pc) * 100vw;
+}

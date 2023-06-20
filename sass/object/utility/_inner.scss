@@ -1,0 +1,35 @@
+@use "./../../foundation/variable" as *;
+
+.u-inner {
+  &--topMenu {
+    padding: 11px 15px 15px 15px;
+
+    @include pc {
+      padding: 24px 25px 25px 25px;
+    }
+  }
+  &--40 {
+    padding: 40px;
+    @include pc {
+      padding: 83px 134px 40px 119px;
+    }
+  }
+  &--20 {
+    padding: 0 spWidth(20);
+    @include tb {
+      padding: 0 tbWidth(39);
+    }
+    @include pc {
+      padding: 0 pcWidth(100);
+    }
+  }
+  &--17x {
+    padding: 0 17px;
+    @include tb {
+      padding: 0 59px 0 34.7px;
+    }
+    @include pc {
+      padding: 0 104px 0 63px;
+    }
+  }
+}

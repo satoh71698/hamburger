@@ -1,0 +1,7 @@
+@use "./../../foundation/variable" as *;
+
+.c-underBar {
+  content: "";
+  background-color: $White;
+  display: inline-block;
+}

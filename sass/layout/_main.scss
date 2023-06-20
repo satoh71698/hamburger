@@ -1,0 +1,8 @@
+@use "./../foundation/variable" as *;
+
+.l-main {
+  @include pc {
+    grid-row: 2/3;
+    grid-column: 1/2;
+  }
+}

@@ -1,0 +1,76 @@
+@use "./../../foundation/variable" as *;
+
+.p-archiveItem {
+  background-color: $rightOrange;
+  height: auto;
+  li {
+    margin-bottom: 20px;
+    @include pc {
+      margin-bottom: 30px;
+    }
+  }
+  &__img {
+    img {
+      object-fit: cover;
+      background-size: cover;
+      background-position: center;
+      height: 100%;
+    }
+    @include tb {
+      width: 50%;
+    }
+  }
+  &__text {
+    background-color: $Brown;
+    padding: spWidth(17);
+    @include tb {
+      padding: tbWidth(30) tbWidth(34);
+      width: 50%;
+    }
+    @include pc {
+      padding: pcWidth(50) pcWidth(60);
+    }
+    h3 {
+      font-size: 20px;
+      font-weight: 700;
+      padding: spWidth(15) 0 spWidth(21) 0;
+      @include tb {
+        padding: 0;
+        padding-bottom: tbWidth(24);
+      }
+      @include pc {
+        font-size: 36px;
+        padding-bottom: pcWidth(47);
+      }
+    }
+    h4 {
+      font-size: 16px;
+      font-weight: 700;
+      padding-bottom: spWidth(10);
+      @include tb {
+        padding-bottom: tbWidth(10);
+      }
+      @include pc {
+        padding-bottom: pcWidth(17);
+        font-size: 24px;
+      }
+    }
+    p {
+      font-size: 16px;
+    }
+  }
+  &__button {
+    margin: 40px 0;
+    padding: spWidth(10) spWidth(42);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 23px;
+    @include tb {
+      margin: 45px 0 40px 0;
+    }
+    @include pc {
+      margin: pcWidth(60) 0;
+      padding: pcWidth(27) pcWidth(106);
+    }
+  }
+}

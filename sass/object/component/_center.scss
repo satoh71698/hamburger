@@ -1,0 +1,9 @@
+.c-center {
+  text-align: center;
+  &__title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+  }
+}

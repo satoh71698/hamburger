@@ -1,0 +1,107 @@
+@use "./../../foundation/variable" as *;
+
+.p-topMenu {
+  background-color: $White;
+  &__content {
+    min-height: 642px;
+    margin: spWidth(20);
+    height: fit-content;
+    @include tb {
+      width: 50%;
+      margin: tbWidth(40) tbWidth(20) tbWidth(40) tbWidth(40);
+    }
+    @include pc {
+      margin: pcWidth(120) pcWidth(40) pcWidth(134) pcWidth(111);
+      height: 1193px;
+    }
+
+    &:last-child {
+      @include tb {
+        width: 50%;
+        margin: tbWidth(40) tbWidth(40) tbWidth(40) tbWidth(20);
+      }
+      @include pc {
+        margin: pcWidth(120) pcWidth(111) pcWidth(134) pcWidth(40);
+      }
+    }
+  }
+
+  &__title {
+    font-size: 41px;
+    @include tb {
+      font-size: 44px;
+    }
+    @include pc {
+      font-size: 80px;
+    }
+  }
+
+  &__under {
+    margin-top: auto;
+  }
+
+  &__bar {
+    height: 4px;
+    width: spWidth(36);
+    @include tb {
+      width: tbWidth(36);
+    }
+    @include pc {
+      width: pcWidth(63);
+    }
+  }
+
+  &__text {
+    background-color: $White;
+    opacity: 0.8;
+    padding-top: spWidth(7) !important;
+    padding: spWidth(15);
+    margin-bottom: 15px;
+    @include tb {
+      padding-top: tbWidth(7) !important;
+      padding: tbWidth(15);
+    }
+    @include pc {
+      padding-top: pcWidth(12) !important;
+      padding: pcWidth(20);
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+    h4 {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: spWidth(5);
+      @include tb {
+        font-size: 24px;
+        margin-bottom: tbWidth(5);
+      }
+      @include pc {
+        margin-bottom: pcWidth(9);
+      }
+    }
+    p {
+      font-size: 16px;
+      line-height: 23px;
+      @include tb {
+        font-size: 14px;
+        line-height: 20px;
+      }
+      @include pc {
+        font-size: 16px;
+        line-height: 23px;
+      }
+    }
+  }
+
+  &__takeOut {
+    background: url(./../img/front-page.takeout.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  &__eatIn {
+    background: url(./../img/front-page.eatin.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}

@@ -1,0 +1,10 @@
+@use "./../../foundation/variable" as *;
+
+.c-logo {
+  h1 {
+    font-size: 40px;
+    @include pc {
+      font-size: 64px;
+    }
+  }
+}

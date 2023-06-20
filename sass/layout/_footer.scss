@@ -1,0 +1,33 @@
+@use "./../foundation/variable" as *;
+
+.l-footer {
+  background: url(./../img/footer-img.png);
+  background-position: center;
+  &__content {
+    padding: spWidth(40) 0 spWidth(30) 0;
+    @include tb {
+      padding: tbWidth(40) 0 tbWidth(30) 0;
+    }
+    @include pc {
+      padding: pcWidth(40) 0 pcWidth(30) 0;
+    }
+    ul {
+      margin-bottom: 34px;
+
+      li {
+        padding-right: 15px;
+        border-right: 1px solid $White;
+        font-size: 20px;
+        &:last-child {
+          padding-right: 0;
+          padding-left: 15px;
+          border-right: none;
+        }
+      }
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+}

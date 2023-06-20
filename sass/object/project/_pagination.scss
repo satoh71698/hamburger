@@ -1,0 +1,83 @@
+@use "./../../foundation/variable" as *;
+
+.p-pagination {
+  width: 100%;
+  margin-top: spWidth(60);
+  margin-bottom: spWidth(30);
+  .wp-pagenavi {
+    display: flex;
+    justify-content: space-between;
+    @include tb {
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .pages {
+    display: none;
+    @include tb {
+      display: block;
+      margin-right: 13px;
+      font-weight: bold;
+      &::before {
+        content: "page";
+      }
+    }
+  }
+  .current {
+    display: none;
+    @include tb {
+      display: block;
+      color: $White;
+      padding: 7px 13px;
+      background-color: $Brown;
+      border: 1px solid $Gray;
+      margin-left: 15px;
+    }
+  }
+  .page {
+    display: none;
+    @include tb {
+      display: block;
+      padding: 7px 13px;
+      background-color: $White;
+      border: 1px solid $Gray;
+      margin-left: 15px;
+    }
+  }
+  .previouspostslink {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    &::after {
+      content: "前へ";
+      @include tb {
+        display: none;
+      }
+    }
+    &::before {
+      content: url(./../../../img/previouspostslink.png);
+      padding-right: 7px;
+      @include tb {
+        padding-right: 2px;
+      }
+    }
+  }
+  .nextpostslink {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    &::before {
+      content: "次へ";
+      @include tb {
+        display: none;
+      }
+    }
+    &::after {
+      content: url(./../../../img/nextpostslink.png);
+      padding-left: 7px;
+      @include tb {
+        padding-left: 17px;
+      }
+    }
+  }
+}

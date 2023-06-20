@@ -1,0 +1,49 @@
+@use "./../../foundation/variable" as *;
+
+.p-archive {
+  h2 {
+    font-size: 28px;
+    font-weight: 700;
+    padding: spWidth(30) 0;
+    @include tb {
+      font-size: 38px;
+      padding: tbWidth(36) 0 tbWidth(25) 0;
+    }
+    @include pc {
+      padding: pcWidth(36) 0 pcWidth(25) 0;
+    }
+  }
+  p {
+    padding-bottom: spWidth(17);
+    font-size: 16px;
+    line-height: 23px;
+    @include tb {
+      padding-bottom: tbWidth(37);
+    }
+    @include pc {
+      padding-bottom: pcWidth(37);
+    }
+  }
+  &__fv {
+    position: relative;
+    img {
+      @include pc {
+        height: pcWidth(239);
+      }
+    }
+    &::after {
+      content: "";
+      background-color: rgba(0, 0, 0, 0.5);
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+
+      @include pc {
+        height: pcWidth(239);
+      }
+    }
+  }
+}

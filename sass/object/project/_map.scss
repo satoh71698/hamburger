@@ -1,0 +1,52 @@
+@use "./../../foundation/variable" as *;
+
+.p-map {
+  background: url(./../img/front-page.map1.png);
+  background-position: center;
+  background-color: #646464;
+  background-blend-mode: soft-light;
+
+  @include pc {
+    min-height: 649px;
+  }
+  &__opacity {
+    background-color: $Black;
+    opacity: 0.6;
+  }
+  &__bar {
+    width: 75px;
+    height: 4px;
+    margin: 20px 0;
+
+    @include pc {
+      margin: 63.5px 0;
+    }
+  }
+  &__backGraund {
+    position: relative;
+    @include pc {
+      min-height: 649px;
+      width: pcWidth(950);
+    }
+  }
+  &__text {
+    height: fit-content;
+    @include pc {
+      height: 100%;
+    }
+    h4 {
+      font-size: 30px;
+      font-weight: 700;
+      @include pc {
+        font-size: 35px;
+      }
+    }
+    p {
+      font-size: 14px;
+      line-height: 33px;
+      @include pc {
+        font-size: 16px;
+      }
+    }
+  }
+}

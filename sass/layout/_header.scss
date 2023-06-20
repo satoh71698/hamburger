@@ -1,0 +1,22 @@
+@use "./../foundation/variable" as *;
+
+.l-header {
+  background-color: $Orange;
+  position: relative;
+  @include pc {
+    grid-row: 1/2;
+    grid-column: 1/2;
+  }
+  &__logo {
+    padding-top: 40px;
+    @include pc {
+      padding-top: 0;
+      padding-left: 61px;
+    }
+  }
+  &__flex {
+    @include pc {
+      height: 218px;
+    }
+  }
+}

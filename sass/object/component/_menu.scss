@@ -1,0 +1,42 @@
+@use "./../../foundation/variable" as *;
+
+.c-menu {
+  position: absolute;
+  z-index: 9999; /*ボタンを最前面に*/
+  top: 14px;
+  right: 16px;
+  cursor: pointer;
+  color: $Gray;
+  @include pc {
+    display: none;
+  }
+  span {
+    display: inline-block;
+    transition: all 0.4s;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+.c-menu.is-active {
+  span {
+    &:nth-of-type(1) {
+      background-color: $Gray;
+      height: 6px;
+      transform: translateY(6px) rotate(-45deg);
+      width: 45px;
+      top: 13px;
+    }
+    &:nth-of-type(2) {
+      opacity: 0;
+    }
+    &:nth-of-type(3) {
+      transform: translateY(-6px) rotate(45deg);
+      width: 45px;
+      height: 6px;
+      background-color: $Gray;
+      top: 25px;
+    }
+  }
+}

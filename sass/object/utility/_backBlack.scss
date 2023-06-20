@@ -1,0 +1,21 @@
+@use "./../../foundation/variable" as *;
+
+.u-backBlack__60 {
+  //   background: rgba($Black, 0.6);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(0, 0, 0, 0.4) 60%,
+    rgba(255, 255, 255, 0) 60%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  @include tb {
+    background: rgba(0, 0, 0, 0.4);
+  }
+  @include pc {
+    background: rgba(0, 0, 0, 0.4);
+  }
+}
+.u-backBlack__20 {
+  background: rgba($Black, 0.29);
+}

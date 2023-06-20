@@ -1,0 +1,86 @@
+@use "./../../foundation/variable" as *;
+
+.u-font {
+  &--30b {
+    font-size: 30px;
+    font-weight: 700;
+    @include pc {
+      font-size: 35px;
+    }
+  }
+
+  &--24b {
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  &--22b {
+    font-size: 22px;
+    font-weight: 700;
+    @include tb {
+      font-size: 24px;
+    }
+  }
+
+  &--14b {
+    font-size: 14px;
+    line-height: 33px;
+    @include pc {
+      font-size: 16px;
+    }
+  }
+
+  &--20 {
+    font-size: 20px;
+  }
+
+  &--16 {
+    font-size: 16px;
+    line-height: 23px;
+    @include tb {
+      font-size: 14px;
+      line-height: 20px;
+    }
+    @include pc {
+      font-size: 16px;
+      line-height: 23px;
+    }
+  }
+
+  &--roboto {
+    font-family: roboto, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    &__41 {
+      @extend .u-font--roboto;
+      font-size: 41px;
+      @include tb {
+        font-size: 44px;
+      }
+      @include pc {
+        font-size: 80px;
+      }
+    }
+    &__40 {
+      @extend .u-font--roboto;
+    }
+    &__36 {
+      @extend .u-font--roboto;
+      font-size: 36px;
+      @include pc {
+        font-size: 40px;
+      }
+    }
+    &__34 {
+      @extend .u-font--roboto;
+      font-size: 34px;
+    }
+    &__20 {
+      @extend .u-font--roboto;
+      font-size: 20px;
+      @include tb {
+        font-size: 34px;
+      }
+    }
+  }
+}

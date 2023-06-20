@@ -1,0 +1,31 @@
+@use "./../../foundation/variable" as *;
+
+.c-flex {
+  display: flex;
+  &--under {
+    display: flex;
+    flex-direction: column;
+  }
+  &--center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &--tb {
+    @include tb {
+      display: flex;
+    }
+  }
+  &--pc {
+    @include pc {
+      display: flex;
+    }
+  }
+  &--pcBetween {
+    @include pc {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}
