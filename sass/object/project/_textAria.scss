@@ -1,0 +1,138 @@
+@use "./../../foundation/variable" as *;
+
+.p-textAria {
+  &__archive {
+    margin-top: spWidth(30);
+    @include tb {
+      margin-top: tbWidth(60);
+    }
+    @include pc {
+      margin-top: pcWidth(60);
+    }
+    & > * {
+      margin-bottom: spWidth(30);
+      @include tb {
+        margin-bottom: tbWidth(60);
+      }
+      @include pc {
+        margin-bottom: pcWidth(60);
+      }
+    }
+
+    h2 {
+      font-size: 28px;
+      font-weight: 700;
+      @include tb {
+        font-size: 38px;
+      }
+    }
+
+    h3 {
+      font-size: 24px;
+      font-weight: 700;
+      @include tb {
+        font-size: 28px;
+      }
+    }
+
+    h4,
+    h5,
+    h6 {
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 23px;
+    }
+
+    blockquote {
+      background-color: $rightBlue;
+      color: #3c2a10;
+      padding: 30px 20px;
+      p {
+        font-size: 16px;
+        padding-bottom: 30px;
+        line-height: 23px;
+      }
+      cite::before {
+        content: "出典元: ";
+        color: #3c2a10;
+      }
+      cite {
+        font-style: normal;
+        a {
+          color: $Blue;
+          display: inline-block;
+          text-decoration: underline;
+        }
+      }
+    }
+    ol {
+      li {
+        margin-left: 26px;
+        list-style-type: decimal;
+        ul {
+          margin-top: 20px;
+        }
+      }
+    }
+    ul {
+      li {
+        ul {
+          margin-top: 20px;
+          margin-left: 26px;
+        }
+      }
+    }
+
+    pre {
+      background-color: $rightBlue;
+    }
+    table {
+      width: 100%;
+      tbody {
+        tr {
+          td {
+            border: 1px solid $Black;
+            padding: 28px;
+          }
+          td:first-child {
+            width: spWidth(135);
+            @include tb {
+              width: tbWidth(215);
+            }
+            @include pc {
+              width: pcWidth(429);
+            }
+          }
+        }
+      }
+    }
+    .wp-block-button {
+      text-align: center;
+      a {
+        background: rgb(242, 237, 233);
+        background: linear-gradient(
+          90deg,
+          rgba(242, 237, 233, 1) 0%,
+          rgba(222, 216, 211, 1) 100%
+        );
+        border-radius: 20px;
+        border: 1px solid $Gray;
+        padding: 30px 0;
+        font-weight: 700;
+      }
+      @include tb {
+        width: tbWidth(429);
+      }
+      @include pc {
+        width: pcWidth(429);
+      }
+    }
+    .strong {
+      font-weight: 700;
+    }
+  }
+}

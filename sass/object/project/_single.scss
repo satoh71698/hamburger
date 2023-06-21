@@ -1,0 +1,19 @@
+@use "./../../foundation/variable" as *;
+
+.p-single {
+  &__text {
+    display: block;
+  }
+  &__fv {
+    position: relative;
+    img {
+      height: spWidth(225);
+      @include tb {
+        height: tbWidth(500);
+      }
+      @include pc {
+        height: pcWidth(500);
+      }
+    }
+  }
+}
