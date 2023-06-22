@@ -47,7 +47,7 @@
                         <a href="<?php the_permalink(); ?>">
                             <div class="p-archiveItem__flex c-flex--tb">
                                 <div class="p-archiveItem__img">
-                                    <?php the_post_thumbnail(""); ?>
+                                    <?php the_post_thumbnail('eyecatch'); ?>
                                 </div>
                                 <div class="p-archiveItem__text c-color--White">
                                     <h3><?php the_title(); ?></h3>
