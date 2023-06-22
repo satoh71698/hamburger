@@ -1,9 +1,17 @@
 @use "./../../foundation/variable" as *;
 
 .p-pagination {
-  width: 100%;
-  margin-top: spWidth(60);
-  margin-bottom: spWidth(30);
+  display: none;
+  @include tb {
+    display: block;
+    width: 100%;
+    margin-top: tbWidth(60);
+    margin-bottom: tbWidth(30);
+  }
+  @include pc {
+    margin-top: pcWidth(150);
+    margin-bottom: pcWidth(65);
+  }
   .wp-pagenavi {
     display: flex;
     justify-content: space-between;
@@ -55,7 +63,7 @@
       }
     }
     &::before {
-      content: url(./../../../img/previouspostslink.png);
+      content: url(./../img/previouspostslink.png);
       padding-right: 7px;
       @include tb {
         padding-right: 2px;
@@ -73,11 +81,46 @@
       }
     }
     &::after {
-      content: url(./../../../img/nextpostslink.png);
+      content: url(./../img/nextpostslink.png);
       padding-left: 7px;
       @include tb {
         padding-left: 17px;
       }
+    }
+  }
+  &__sp {
+    width: 100%;
+    padding: spWidth(60) spWidth(20) spWidth(30) spWidth(20);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include tb {
+      display: none;
+    }
+    p {
+      display: flex;
+      font-size: 16px;
+      color: $Gray;
+      &:nth-of-type(1) {
+        position: relative;
+        left: 25px;
+        &::before {
+          content: url(./../img/previouspostslink.png);
+          padding-right: 7px;
+        }
+      }
+      &:nth-of-type(2) {
+        position: relative;
+        right: 25px;
+        &::after {
+          content: url(./../img/nextpostslink.png);
+          padding-left: 7px;
+        }
+      }
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
     }
   }
 }

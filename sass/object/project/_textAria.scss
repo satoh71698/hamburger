@@ -1,13 +1,43 @@
 @use "./../../foundation/variable" as *;
 
 .p-textAria {
+  padding: spWidth(30) spWidth(20) spWidth(19) spWidth(20);
+  @include tb {
+    padding: 0 tbWidth(39);
+    padding-top: tbWidth(36);
+    padding-bottom: tbWidth(37);
+  }
+  @include pc {
+    padding: 0 pcWidth(100);
+    padding-top: tbWidth(36);
+    padding-bottom: tbWidth(37);
+  }
+  h2 {
+    font-size: 28px;
+    font-weight: 700;
+    padding-bottom: spWidth(30);
+    @include tb {
+      padding-bottom: tbWidth(30);
+      font-size: 38px;
+    }
+    @include pc {
+      padding-bottom: pcWidth(30);
+    }
+  }
+  p {
+    font-size: 16px;
+    line-height: 23px;
+  }
   &__archive {
     margin-top: spWidth(30);
+    margin-bottom: spWidth(150);
     @include tb {
       margin-top: tbWidth(60);
+      margin-bottom: tbWidth(150);
     }
     @include pc {
       margin-top: pcWidth(60);
+      margin-bottom: pcWidth(190);
     }
     & > * {
       margin-bottom: spWidth(30);
@@ -69,6 +99,19 @@
         }
       }
     }
+    .wp-block-gallery {
+      figure {
+        flex-grow: 0 !important;
+        width: 100% !important;
+        @include tb {
+          width: 49% !important;
+        }
+        @include pc {
+          width: 32% !important;
+        }
+      }
+    }
+
     ol {
       li {
         margin-left: 26px;
@@ -83,12 +126,20 @@
         ul {
           margin-top: 20px;
           margin-left: 26px;
+          margin-bottom: 20px;
         }
       }
     }
 
     pre {
       background-color: $rightBlue;
+      padding-left: spWidth(50);
+      @include tb {
+        padding-left: tbWidth(50);
+      }
+      @include pc {
+        padding-left: pcWidth(50);
+      }
     }
     table {
       width: 100%;
@@ -111,8 +162,8 @@
       }
     }
     .wp-block-button {
-      text-align: center;
       a {
+        color: $Brown;
         background: rgb(242, 237, 233);
         background: linear-gradient(
           90deg,
@@ -123,12 +174,13 @@
         border: 1px solid $Gray;
         padding: 30px 0;
         font-weight: 700;
-      }
-      @include tb {
-        width: tbWidth(429);
-      }
-      @include pc {
-        width: pcWidth(429);
+        width: 100%;
+        @include tb {
+          width: tbWidth(429) !important;
+        }
+        @include pc {
+          width: pcWidth(429) !important;
+        }
       }
     }
     .strong {

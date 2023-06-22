@@ -31,11 +31,13 @@
       padding-left: 46px;
       width: 100%;
     }
-    & > li {
-      font-size: 24px;
-      font-weight: bold;
-      padding-bottom: 40px;
-      padding-top: 34px;
+    .menu-item-has-children {
+      & > a {
+        font-size: 24px;
+        font-weight: bold;
+        padding-bottom: 40px;
+        padding-top: 34px;
+      }
     }
     ul {
       font-size: 20px;

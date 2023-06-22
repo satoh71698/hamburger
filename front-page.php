@@ -1,67 +1,5 @@
-<!DOCTYPE html>
-<html lang="ja">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css" /><!-- リセット　-->
-    <!-- font-->
-    <link rel="stylesheet" href="https://use.typekit.net/evy0fjn.css">
-</head>
-
-<body>
-    <div class="l-container">
-        <!-- .l-header -->
-        <header class="l-header">
-            <div class="c-center l-header__flex c-flex--pcBetween">
-                <div class="l-header__logo c-logo">
-                    <h1 class="u-font--roboto c-color--Gray">Hamburger</h1>
-                </div>
-                <form class="p-search c-flex--center">
-                    <input type="search" class="p-search__input c-icon--musimegane c-input--search" name="search">
-                    <input type="submit" class="p-search__button c-button__search c-color--Gray" name="submit"
-                        value="検索">
-                </form>
-            </div>
-        </header>
-        <!-- /.l-header -->
-        <div class="l-sideMenu__layer"></div>
-        <!-- g-nav -->
-        <div class="c-menu l-sideMenu__menu"><span></span><span class="u-font--roboto">Menu</span><span></span>
-        </div>
-        <aside class="l-sideMenu">
-            <div class="l-sideMenu__list c-color--Gray">
-                <li><a href="#">バーガー</a></li>
-                <ul>
-                    <li><a href="#">ハンバーガー</a></li>
-                    <li><a href="#">チーズバーガー</a></li>
-                    <li><a href="#">テリヤキバーガー</a></li>
-                    <li><a href="#">アボカドバーガー</a></li>
-                    <li><a href="#">フィッシュバーガー</a></li>
-                    <li><a href="#">ベーコンバーガー</a></li>
-                    <li><a href="#">チキンバーガー</a></li>
-                </ul>
-                <li><a href="#">サイド</a></li>
-                <ul>
-                    <li><a href="#">ポテト</a></li>
-                    <li><a href="#">サラダ</a></li>
-                    <li><a href="#">ナゲット</a></li>
-                    <li><a href="#">コーン</a></li>
-                </ul>
-                <li><a href="#">ドリンク</a></li>
-                <ul>
-                    <li><a href="#">コーラ</a></li>
-                    <li><a href="#">ファンタ</a></li>
-                    <li><a href="#">オレンジ</a></li>
-                    <li><a href="#">アップル</a></li>
-                    <li><a href="#">紅茶(Ice/Hot)</a></li>
-                    <li><a href="#">コーヒー(Ice/Hot)</a></li>
-                </ul>
-            </div>
-        </aside>
+<?php get_header(); ?>
+            <?php get_template_part("content-sideMenu"); ?>
         <!-- g-nav -->
         <!-- main -->
         <main class="l-main">
@@ -69,8 +7,8 @@
             <section class="p-fv">
                 <div class="p-fv__content c-title">
                     <picture>
-                        <source srcset="img/mainvisual-pc@2x.jpg" media="(min-width: 768px)" type="image/png">
-                        <img src="img/mainvisual-sp@2x.jpg" alt=”代替テキスト”>
+                        <source srcset="<?php echo get_template_directory_uri(); ?>/img/mainvisual-pc@2x.jpg" media="(min-width: 768px)" type="image/png">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/mainvisual-sp@2x.jpg" alt=”代替テキスト”>
                     </picture>
                     <div class="p-fv__topTitle">
                         <h2 class="u-font--roboto c-color--White">ダミーサイト</h2>
@@ -140,30 +78,4 @@
         </main>
         <!-- /main -->
     </div>
-    <!-- .l-footer -->
-    <footer class="l-footer c-bg--imgfooter">
-        <div class="l-footer__content c-center c-color--White">
-            <ul class="c-flex--center">
-                <li>
-                    <a href="">
-                        ショップ情報
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        ヒストリー
-                    </a>
-                </li>
-            </ul>
-            <p>Copyright: RaiseTech</p>
-        </div>
-    </footer>
-    <!-- /.l-footer -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="<?php echo get_template_directory_uri(); ?>/js/main.js"></script>
-    <script src="js/main.js"></script>
-</body>
-
-
-</html>
+<?php get_footer(); ?>
