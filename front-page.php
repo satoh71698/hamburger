@@ -20,7 +20,11 @@
             <!-- p-topMenu -->
             <section class="p-topMenu c-flex--tb">
                 
-                <a href="<?php $cat_news = get_category_by_slug('take_out'); echo esc_url(get_category_link($cat_news->cat_ID)); ?>" class="p-topMenu__content p-topMenu__takeOut u-inner--topMenu c-flex--under">
+                <a href="<?php 
+                $tag_news = get_the_tags();
+                echo esc_url(get_tag_link(20)); 
+                ?>" 
+                class="p-topMenu__content p-topMenu__takeOut u-inner--topMenu c-flex--under">
                     <div class="p-topMenu__title">
                         <h2 class="u-font--roboto c-color--White">Take Out</h2>
                         <span class="p-topMenu__bar c-underBar"></span>
@@ -39,7 +43,11 @@
                         </div>
                     </div>
                 </a>
-                <a href="<?php $cat_news = get_category_by_slug('eat_in'); echo esc_url(get_category_link($cat_news->cat_ID)); ?>"  class="p-topMenu__content p-topMenu__eatIn u-inner--topMenu c-flex--under">
+                <a href="<?php 
+                $tag_news = get_the_tags();
+                echo esc_url(get_tag_link(21)); 
+                ?>" 
+                class="p-topMenu__content p-topMenu__eatIn u-inner--topMenu c-flex--under">
                     <div class="p-topMenu__title">
                         <h2 class="u-font--roboto c-color--White">Eat In</h2>
                         <span class="p-topMenu__bar c-underBar"></span>
