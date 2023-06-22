@@ -4,8 +4,8 @@
 
 /*---------------------------- screen ---------------------------------*/
 
-@mixin sp($width-media: 0px) {
-  @media only screen and (min-width: $width-media) {
+@mixin sp($width-media: 767px) {
+  @media only screen and (max-width: $width-media) {
     @content;
   }
 }

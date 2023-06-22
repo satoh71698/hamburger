@@ -7,6 +7,7 @@
       height: spWidth(230);
       background-size: cover;
       object-fit: cover;
+      width: 100%;
       @include tb {
         height: tbWidth(230);
       }
