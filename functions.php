@@ -10,6 +10,7 @@
     add_theme_support( 'post-thumbnails' );
     add_theme_support( 'title-tag' );
     add_theme_support( 'menus' );
+    add_image_size('eyecatch', '677', '471', true);
     register_nav_menus( array(
         'footer_nav' => esc_html__( 'footer navigation', 'rtbread' ),
         'category_nav' => esc_html__( 'category navigation', 'rtbread' ),
